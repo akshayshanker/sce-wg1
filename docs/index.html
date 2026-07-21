@@ -37,9 +37,12 @@ a:hover{color:var(--ink);}
 .theme-toggle{display:inline-flex;align-items:center;color:var(--muted);background:none;border:none;padding:6px;margin:-6px;cursor:pointer;}
 .theme-toggle:hover{color:var(--accent);}
 .theme-toggle svg{display:block;}
-.theme-toggle .i-light,.theme-toggle .i-dark{display:none;}
-:root[data-om-theme="light"] .theme-toggle .i-auto,:root[data-om-theme="dark"] .theme-toggle .i-auto{display:none;}
+/* Icon shows the effective theme: system preference until an explicit choice is made. */
+.theme-toggle .i-dark{display:none;}
+@media (prefers-color-scheme: dark){.theme-toggle .i-light{display:none;}.theme-toggle .i-dark{display:block;}}
 :root[data-om-theme="light"] .theme-toggle .i-light{display:block;}
+:root[data-om-theme="light"] .theme-toggle .i-dark{display:none;}
+:root[data-om-theme="dark"] .theme-toggle .i-light{display:none;}
 :root[data-om-theme="dark"] .theme-toggle .i-dark{display:block;}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0;}
 </style>
@@ -59,11 +62,10 @@ a:hover{color:var(--ink);}
         <a href="#how" class="nav-link">How we work</a>
         <a href="#milestones" class="nav-link">Milestones</a>
         <a href="#join" class="nav-link-join">Join</a>
-        <button type="button" id="theme-toggle" class="theme-toggle" title="theme: auto — click to switch">
-          <svg class="i-auto" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18Z" fill="currentColor" stroke="none"/></svg>
+        <button type="button" id="theme-toggle" class="theme-toggle" title="Switch between light and dark">
           <svg class="i-light" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.9 1.9M19.1 4.9l-1.8 1.8M6.7 17.3l-1.9 1.9"/></svg>
           <svg class="i-dark" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
-          <span class="sr-only" id="theme-state" aria-live="polite">theme: auto</span>
+          <span class="sr-only" id="theme-state" aria-live="polite">Switch between light and dark</span>
         </button>
       </div>
     </nav>
@@ -205,16 +207,16 @@ a:hover{color:var(--ink);}
 (function(){
   var btn=document.getElementById('theme-toggle');
   var state=document.getElementById('theme-state');
-  var order=['auto','light','dark'];
-  function current(){return document.documentElement.dataset.omTheme||'auto';}
+  var mq=window.matchMedia?window.matchMedia('(prefers-color-scheme: dark)'):null;
+  function current(){return document.documentElement.dataset.omTheme||((mq&&mq.matches)?'dark':'light');}
   function label(){var t=current();state.textContent='theme: '+t;btn.title='theme: '+t+' — click to switch';}
   btn.addEventListener('click',function(){
-    var next=order[(order.indexOf(current())+1)%order.length];
-    if(next==='auto'){delete document.documentElement.dataset.omTheme;}
-    else{document.documentElement.dataset.omTheme=next;}
+    var next=current()==='dark'?'light':'dark';
+    document.documentElement.dataset.omTheme=next;
     label();
-    try{if(next==='auto')localStorage.removeItem('wg1-theme');else localStorage.setItem('wg1-theme',next);}catch(e){}
+    try{localStorage.setItem('wg1-theme',next);}catch(e){}
   });
+  if(mq&&mq.addEventListener)mq.addEventListener('change',label);
   label();
 })();
 </script>

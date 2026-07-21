@@ -17,8 +17,10 @@
 <style>
 :root{color-scheme:light dark;--bg:#FAF9F6;--surface:#F3F1EC;--ink:#1D1B18;--muted:#6E6961;--muted-strong:#66615A;--line:#E4E1D9;--accent:#96402E;--accent-soft:color-mix(in oklab,#96402E 10%,var(--bg));}
 @media (prefers-color-scheme: dark){
-:root{--bg:#171512;--surface:#201D19;--ink:#E9E6DF;--muted:#9B958B;--muted-strong:#9B958B;--line:#2F2B25;--accent:color-mix(in oklab,#96402E 72%,white);--accent-soft:color-mix(in oklab,#96402E 18%,var(--bg));}
+:root:not([data-om-theme="light"]){--bg:#171512;--surface:#201D19;--ink:#E9E6DF;--muted:#9B958B;--muted-strong:#9B958B;--line:#2F2B25;--accent:color-mix(in oklab,#96402E 72%,white);--accent-soft:color-mix(in oklab,#96402E 18%,var(--bg));}
 }
+:root[data-om-theme="dark"]{color-scheme:dark;--bg:#171512;--surface:#201D19;--ink:#E9E6DF;--muted:#9B958B;--muted-strong:#9B958B;--line:#2F2B25;--accent:color-mix(in oklab,#96402E 72%,white);--accent-soft:color-mix(in oklab,#96402E 18%,var(--bg));}
+:root[data-om-theme="light"]{color-scheme:light;}
 @media (prefers-reduced-motion: no-preference){html{scroll-behavior:smooth;}}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:'Source Sans 3',system-ui,sans-serif;-webkit-font-smoothing:antialiased;}
 a{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:3px;}
@@ -32,7 +34,13 @@ a:hover{color:var(--ink);}
 .foot-link{font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--muted);}
 .foot-link:hover{color:var(--accent);}
 .foot-tbd{font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--muted);}
+.theme-toggle{font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--muted);background:none;border:none;padding:0;cursor:pointer;}
+.theme-toggle:hover{color:var(--accent);}
 </style>
+<script>
+/* Apply a saved theme override before first paint to avoid a flash of the wrong theme. */
+(function(){try{var t=localStorage.getItem('wg1-theme');if(t==='light'||t==='dark')document.documentElement.dataset.omTheme=t;}catch(e){}})();
+</script>
 </head>
 <body>
 <div style="min-height:100vh; background:var(--bg); color:var(--ink);">
@@ -45,6 +53,7 @@ a:hover{color:var(--ink);}
         <a href="#how" class="nav-link">How we work</a>
         <a href="#milestones" class="nav-link">Milestones</a>
         <a href="#join" class="nav-link-join">Join</a>
+        <button type="button" id="theme-toggle" class="theme-toggle">theme: auto</button>
       </div>
     </nav>
 
@@ -181,5 +190,21 @@ a:hover{color:var(--ink);}
 
   </div>
 </div>
+<script>
+(function(){
+  var btn=document.getElementById('theme-toggle');
+  var order=['auto','light','dark'];
+  function current(){return document.documentElement.dataset.omTheme||'auto';}
+  function label(){btn.textContent='theme: '+current();}
+  btn.addEventListener('click',function(){
+    var next=order[(order.indexOf(current())+1)%order.length];
+    if(next==='auto'){delete document.documentElement.dataset.omTheme;}
+    else{document.documentElement.dataset.omTheme=next;}
+    label();
+    try{if(next==='auto')localStorage.removeItem('wg1-theme');else localStorage.setItem('wg1-theme',next);}catch(e){}
+  });
+  label();
+})();
+</script>
 </body>
 </html>

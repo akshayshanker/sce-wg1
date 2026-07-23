@@ -24,11 +24,16 @@ The group runs two complementary projects:
 
 ## Joining
 
-Membership is open — anyone working on the language and semantics of economic models is welcome. Introduce yourself via the issue tracker, or email the co-chairs.
+The group works in the open, but membership is by invitation from the co-chairs — this keeps the author set coherent across Project A. If you work on the language and semantics of economic models, register your interest via the issue tracker or email the co-chairs.
+
+You do not need to be a member to follow along: this repository and its issue tracker are open to everyone.
 
 <!--
 TODO before announcing the site:
-- Replace the placeholder contact address (wg1@example.org) in docs/index.html with the real co-chairs address.
-- Add the sign-up form link and mailing-list link when they exist.
+- Replace the placeholder address (wg1@example.org) in docs/index.html with both co-chairs'
+  contact addresses. Correspondence is sent personally by the co-chairs; no shared wg1@
+  address and no mailing list are being created, so the footer "Mailing list" entry stays tbd.
+- Add the sign-up form link when it exists, and the when2meet availability grid.
+- Finalise the Project A description (AAS).
 - Add a CODE_OF_CONDUCT.md and link it from the site footer.
 -->

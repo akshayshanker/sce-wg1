@@ -32,8 +32,6 @@ While ontologies often stay implicit within a discipline, the proliferation of A
 Economics is not the first field to need a semantic ontology: manufacturing's Process Specification Language (Grüninger and Menzel 2003; Bock and Grüninger 2005), Modelica for physical systems (Fritzson and Engelson 1998; Modelica Association 2023), planning's PDDL2.1 (Fox and Long 2003), and neuroscience's NeuroML (Gleeson et al. 2010) each attach an explicit, solver-independent meaning to a model representation. Industry has met the same need from the opposite direction, reconstructing never-written conceptual models of the business from its data (AWS Database Blog 2026). Compared with all of these, economics is well placed, because the relations among a model's objects are the theory itself — stated in the paper, but not systematically attached to the files and function calls that compute it.
 
 **Our proposal.** We propose a special issue that collects semantic ontologies for model languages, toolkits, and estimation methods of computational economics. Each paper takes one language, toolkit, or estimation method, states its semantic ontology, and demonstrates it on worked examples of the team's own choosing. The SCE working group will submit a subset of the papers, an open call will invite the rest, and a comparison paper, written jointly by the participating teams, closes the issue.
-<!-- The format is familiar at the journal, whose scope includes computational methods: in two earlier special issues, several teams computed the same models and a closing comparison drew the results together (den Haan, Judd and Juillard 2010, 2011). We keep the many teams and the closing comparison, but instead of solving common models the teams state what their models and code mean. When a model written for one toolkit can be read, checked, and re-solved in another, the semantic ontologies that make this possible are research infrastructure. -->
-
 <!-- [^example]: For example, the sentence "a policy shock raises entrants at date $t$" is satisfied by two different models — the shock may reach the cross-sectional distribution at $t$ or at $t+1$ — and the impulse response differs before any grid or solver is chosen. The code computes one of the two models, and nothing on the page records which. The documented counterpart: Su and Judd (2012) recast one estimator in two computational formulations and return identical estimates, while Dubé, Fox and Su (2012) show a loose inner-loop tolerance changing estimated own-price elasticities by roughly a factor of two. -->
 
 [^ha]: In a heterogeneous-agent model, for instance, the ontology contains the response of decision rules to prices, the cross-sectional distribution decisions induce, and the feedback of that distribution into prices — as relations of the theory and as their computational counterparts.
@@ -114,10 +112,6 @@ AWS Database Blog (2026). "Build a semantic ontology to power AI assistants on A
 Bock, C., and M. Grüninger (2005). "PSL: A Semantic Domain for Flow Models." *Software and Systems Modeling* 4, 209–231.
 
 Ciocchetta, F., and J. Hillston (2009). "Bio-PEPA: A Framework for the Modelling and Analysis of Biological Systems." *Theoretical Computer Science* 410(33–34), 3065–3084.
-
-den Haan, W. J., K. L. Judd, and M. Juillard (2010). "Computational suite of models with heterogeneous agents: Incomplete markets and aggregate uncertainty." *Journal of Economic Dynamics and Control* 34(1), 1–3.
-
-den Haan, W. J., K. L. Judd, and M. Juillard (2011). "Computational suite of models with heterogeneous agents II: Multi-country real business cycle models." *Journal of Economic Dynamics and Control* 35(2), 175–177.
 
 Dubé, J.-P., J. T. Fox, and C.-L. Su (2012). "Improving the Numerical Performance of Static and Dynamic Aggregate Discrete Choice Random Coefficients Demand Estimation." *Econometrica* 80(5), 2231–2267.
 

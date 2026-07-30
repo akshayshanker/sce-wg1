@@ -224,26 +224,27 @@ components.
 
 Broadly, a team can choose among three families of formalism, which differ
 in how much meaning they fix ([Uschold and Grüninger 1996](#ref-uschold1996)).
-*Mathematical semantics.*
-The team translates its representations into mathematical structures and
-proves properties of the translation: it may assign each written form an object in the ordered
+The first family, *mathematical semantics*, translates representations into
+mathematical structures and proves properties of the translation: a team may
+assign each written form an object in the ordered
 structures of domain theory (denotational semantics; [Scott and Strachey 1971](#ref-scott1971)), construct meaning as the unique homomorphism from a many-sorted
 algebra of terms (initial-algebra semantics; [Goguen, Thatcher, Wagner and Wright 1977](#ref-goguen1977)), interpret a typed syntax in a category with matching structure
 (typed categories; [Lambek and Scott 1986](#ref-lambek1986)), write rules specifying execution
 on an abstract machine (operational semantics; [Plotkin 1981](#ref-plotkin1981)), or state the
 assertions that hold before and after execution (axiomatic semantics; [Hoare 1969](#ref-hoare1969)).
 
-*Logical axiomatization.*
-The team writes the ontology as a theory whose models are its admissible
-interpretations, in current practice a description logic ([Gruber 1993](#ref-gruber1993); [Baader et al. 2017](#ref-baader2017)).
+Where mathematical semantics interprets a syntax, the second family,
+*logical axiomatization*, states the ontology directly, as a theory whose
+models are its admissible interpretations, in current practice a description
+logic ([Gruber 1993](#ref-gruber1993); [Baader et al. 2017](#ref-baader2017)).
 
-*Graphs and diagrams.*
-The team records entities and relations as a graph or diagram with little or
+When even axioms are more structure than a domain supports, the third
+family, *graphs and diagrams*, records entities and relations with little or
 no axiomatization — an entity-relationship diagram ([Chen 1976](#ref-chen1976)),
 a UML class diagram ([Berardi, Calvanese and De Giacomo 2005](#ref-berardi2005)),
 or a knowledge graph ([Hogan et al. 2021](#ref-hogan2021)).
-This family overlaps with logical axiomatization, since a knowledge graph
-written in a web ontology language is at once a graph and a logical theory.
+The last two families overlap, since a knowledge graph written in a web
+ontology language is at once a graph and a logical theory.
 
 Different fields have made different choices: programming-language
 researchers state meaning mathematically, biomedical consortia axiomatize

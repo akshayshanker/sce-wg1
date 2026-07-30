@@ -260,10 +260,10 @@ rules for execution on an abstract machine
 assertions that hold before and after execution
 ([Hoare 1969](#ref-hoare1969)).
 
-Different fields settle at different points on this scale: industry records
-knowledge graphs from observed data, without axioms
-([Noy et al. 2019](#ref-noy2019)); biomedical consortia axiomatize their
-ontologies in description logic
+Different fields settle at different points on this scale: Google and other
+technology firms record knowledge graphs from observed data, without axioms
+([Noy et al. 2019](#ref-noy2019)); the Gene Ontology Consortium states its
+ontology of gene functions in description logic
 ([Ashburner et al. 2000](#ref-ashburner2000)); and programming-language
 researchers state full mathematical semantics.
 

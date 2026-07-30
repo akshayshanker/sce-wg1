@@ -31,9 +31,6 @@ downloads:
     title: Proposal (PDF)
 ---
 
-*Society for Computational Economics Working Group No. 1 on Language and
-Formal Semantics.*
-
 ## Introduction and Proposal
 
 When economists compute a model, its precise *meaning* is
@@ -55,10 +52,10 @@ translate modeling code.
 To interpret or verify AI output we need a statement, independent of the
 code, of which economic objects are computed and which relations among them
 are enforced; we call such statements *semantic ontologies*.
-Without them, AI use is prone to error and misunderstanding.
-With them, translating models between toolkits, and even generating new
-modeling research, become operations a language model can carry out and be
-checked on cheaply, rather than manual recoding.[^mmb]
+Without semantic ontologies, AI use is prone to error and misunderstanding.
+With semantic ontologies, translating models between toolkits, and even
+generating new modeling research, become operations a language model can
+carry out and be checked on cheaply, rather than manual recoding.[^mmb]
 
 ```{raw:tex}
 \begin{displaybox}[breakable]{Proposed special issue}
@@ -103,8 +100,8 @@ For our purposes, a semantic ontology consists of the objects and
 relations within the model, the meaning of those objects and relations, and
 the written forms that record them (syntax: a file, a model write-up, a
 specification).[^ha]
-Theory supplies part of the semantic ontology — a general-equilibrium
-model's objects are precisely defined — but the semantic ontology must
+Theory supplies part of the semantic ontology (a general-equilibrium
+model's objects are precisely defined), but the semantic ontology must
 collect these definitions, map them concretely to computational and written
 counterparts, and state the assumptions under which the mapping holds.
 Without a written semantic ontology, nothing says which of the theory's
@@ -112,8 +109,8 @@ objects a given file or function call stands for, and ordinary solver code
 gives one executable realization, not a solver-independent statement of what
 the representation denotes.
 
-Economics is not the first field to need a semantic ontology: manufacturing's
-Process Specification Language ([Grüninger and Menzel 2003](#ref-gruninger2003); [Bock and Grüninger 2005](#ref-bock2005)), Modelica for physical systems ([Fritzson and Engelson 1998](#ref-fritzson1998); [Modelica Association 2023](#ref-modelica2023)), planning's PDDL2.1 ([Fox and Long 2003](#ref-fox2003)), and neuroscience's
+Economics is not the first field to need a semantic ontology.
+Manufacturing's Process Specification Language ([Grüninger and Menzel 2003](#ref-gruninger2003); [Bock and Grüninger 2005](#ref-bock2005)), Modelica for physical systems ([Fritzson and Engelson 1998](#ref-fritzson1998); [Modelica Association 2023](#ref-modelica2023)), planning's PDDL2.1 ([Fox and Long 2003](#ref-fox2003)), and neuroscience's
 NeuroML ([Gleeson et al. 2010](#ref-gleeson2010)) each attach an explicit, solver-independent
 meaning to a model representation.
 Industry has met the same need from the opposite direction, reconstructing
@@ -122,14 +119,14 @@ processes ([AWS Database Blog 2026](#ref-aws2026)).
 Compared with all of these, economics is well placed: the relations among a
 model's objects are the theory itself, already stated precisely in the paper.
 What remains unstated is the map from the representations economists compute
-with — model files, toolkit calls, estimation specifications — to that
+with (model files, toolkit calls, estimation specifications) to that
 theory, and the conditions under which the map holds.
 Stating these maps, domain by domain, is the work this issue proposes.
 
 <!--
 [^example]: For example, the sentence "a policy shock raises entrants at date
-$t$" is satisfied by two different models — the shock may reach the
-cross-sectional distribution at $t$ or at $t+1$ — and the impulse response
+$t$" is satisfied by two different models, since the shock may reach the
+cross-sectional distribution at $t$ or at $t+1$, and the impulse response
 differs before any grid or solver is chosen.
 The code computes one of the two models, and nothing on the page records
 which.
@@ -140,8 +137,8 @@ elasticities by roughly a factor of two.
 -->
 
 [^cg]: Whichever domain a paper addresses, its theory and mathematics are
-taken as pre-existing — the Bellman equation is not in question; what a given
-Dynare file or HARK model means is. A language, toolkit, or empirical-method
+taken as pre-existing: the Bellman equation is not in question, while what
+a given Dynare file or HARK model means is. A language, toolkit, or empirical-method
 paper therefore emphasizes the map from representations to the mathematical
 objects they stand for, while a model-class paper emphasizes the objects and relations
 implied by its mathematical and theoretical framework. Differences among the stated ontologies
@@ -149,8 +146,8 @@ are results for the closing comparison to report.
 
 [^ha]: In a heterogeneous-agent model, for instance, the ontology contains the
 response of decision rules to prices, the cross-sectional distribution
-decisions induce, and the feedback of that distribution into prices — as
-relations of the theory and as their computational counterparts.
+decisions induce, and the feedback of that distribution into prices, both
+as relations of the theory and as their computational counterparts.
 
 [^mmb]: The nearest precedent in economics, the Macroeconomic Model Data Base
 ([Wieland et al. 2012](#ref-wieland2012)), compares models under common variables, common shocks,
@@ -184,11 +181,13 @@ method, a model class, or a combination of these.[^cg]
 - **Estimation and empirical methods.**
   An empirical method takes a model to data.
   It states which measured objects stand for the model's quantities (for
-  example, prices and shocks); which classifications organize them; and
-  which transformations construct the inputs to estimation or calibration.
-  The simulated method of moments and indirect inference are cases, as are
-  the social accounting matrices and input-output tables to which computable
-  general-equilibrium models are calibrated.
+  example, prices and shocks), which classifications organize those objects,
+  and which transformations construct the inputs to estimation or
+  calibration.
+  The simulated method of moments and indirect inference are examples of
+  empirical methods, and so is the calibration of a computable
+  general-equilibrium model to a social accounting matrix or input-output
+  table.
 - **Model classes.**
   A model class is a family of models built from the same kinds of objects, as
   in heterogeneous-agent macroeconomies or overlapping-generations economies.
@@ -239,40 +238,43 @@ restrictions on what they mean.
 Writing the ontology as *logical axioms* fixes more: the axioms rule out
 interpretations of the objects much as parameter restrictions rule out
 models.
-The axioms can be stated in any formal logic — in the older tradition
-first-order logic ([Gruber 1993](#ref-gruber1993)), and in much current
-practice a description logic such as the Semantic Web's Web Ontology
-Language (OWL) ([Baader et al. 2017](#ref-baader2017);
+The axioms can be stated in any formal logic.
+In the older tradition this meant first-order logic
+([Gruber 1993](#ref-gruber1993)), and in much current practice it means a
+description logic such as the Semantic Web's Web Ontology Language (OWL)
+([Baader et al. 2017](#ref-baader2017);
 [W3C OWL Working Group 2012](#ref-owl2012)).
 
 The most is fixed by the *mathematical semantics* developed for programming
 languages, which attach an explicit mathematical meaning to every written
-form: denotational semantics assigns each form an object in the ordered
-structures of domain theory ([Scott and Strachey 1971](#ref-scott1971));
-initial-algebra semantics takes meaning to be the unique homomorphism from a
-many-sorted algebra of terms
-([Goguen, Thatcher, Wagner and Wright 1977](#ref-goguen1977)); typed
-categories interpret a typed syntax in a category with matching structure
-([Lambek and Scott 1986](#ref-lambek1986)); operational semantics gives
-rules for execution on an abstract machine
-([Plotkin 1981](#ref-plotkin1981)); and axiomatic semantics gives the
+form.
+Denotational semantics assigns each form an object in the ordered
+structures of domain theory ([Scott and Strachey 1971](#ref-scott1971)).
+Initial-algebra semantics takes meaning to be the unique homomorphism from
+a many-sorted algebra of terms
+([Goguen, Thatcher, Wagner and Wright 1977](#ref-goguen1977)).
+Typed categories interpret a typed syntax in a category with matching
+structure ([Lambek and Scott 1986](#ref-lambek1986)).
+Operational semantics gives rules for execution on an abstract machine
+([Plotkin 1981](#ref-plotkin1981)), and axiomatic semantics gives the
 assertions that hold before and after execution
 ([Hoare 1969](#ref-hoare1969)).
 
-Practice differs by field. Google and other
-technology firms record knowledge graphs from observed data, without axioms
-([Noy et al. 2019](#ref-noy2019)); the Gene Ontology Consortium states its
-ontology of gene functions in description logic
-([Ashburner et al. 2000](#ref-ashburner2000)); and a few programming
-languages, such as Standard ML and WebAssembly, have been given complete
-formal semantics ([Milner, Tofte, Harper and MacQueen 1997](#ref-milner1997);
+Practice differs by field.
+Google and other technology firms record knowledge graphs from observed
+data, without axioms ([Noy et al. 2019](#ref-noy2019)).
+The Gene Ontology Consortium states its ontology of gene functions in
+description logic ([Ashburner et al. 2000](#ref-ashburner2000)).
+A few programming languages, such as Standard ML and WebAssembly, have been
+given complete formal semantics
+([Milner, Tofte, Harper and MacQueen 1997](#ref-milner1997);
 [Haas et al. 2017](#ref-haas2017)), though most languages in use have not.
 
 How far along this scale a paper goes depends on whether its domain of
 study has a syntax.
-A team whose domain has one — a modeling language or a toolkit — can use any
-of the mathematical semantics; a team whose ontology has no syntax — a model
-class, or an empirical method before its specification is constructed — can
+A team whose domain has one (a modeling language or a toolkit) can use any
+of the mathematical semantics; a team whose ontology has no syntax (a model
+class, or an empirical method before its specification is constructed) can
 axiomatize the ontology in a logic or record it as a graph.
 Declarative languages make the mathematical route easiest: a Dynare or Dolo
 file states the model itself rather than a procedure for solving it, so the
@@ -305,13 +307,13 @@ between submission and revision.
 
 The working group's members include developers of Dynare, HARK, and the VFI
 Toolkit.
-Committed teams: [to be listed — only teams that have agreed in writing].
+Committed teams: [to be listed; only teams that have agreed in writing].
 The working group's papers will come from its subgroups.
 Akshay Shanker and Matthew McKay chair the working group and coordinate the
 teams and the internal review.
 The guest editors (a lead editor and at least one co-editor, neither
 submitting to the issue) are drawn from outside the working group [names,
-institutions — TBC].
+institutions; TBC].
 Papers are submitted through the journal's editorial system, marked for this
 special issue, and are refereed under the journal's ordinary standards; the
 guest editors handle every paper, including the comparison paper, subject to
@@ -336,8 +338,8 @@ Calendar dates TBC on acceptance.
 A paper addresses those of the following five research themes relevant to its
 domain of study.
 The first three are the components of the domain's semantic ontology; the
-last two are statements about it — when the interpretation holds, and what
-preserves it under changes of representation and computation:
+last two are statements about it (when the interpretation holds, and what
+preserves it under changes of representation and computation):
 
 ```{raw:tex}
 \begin{displaybox}[breakable]{The research themes}
@@ -347,15 +349,15 @@ preserves it under changes of representation and computation:
 :class: displaybox displaybox-themes
 
 1. **Ontology: what is assumed to exist.**
-The economic and mathematical entities and relations within the domain —
-agents, states, shocks, timing, the equilibrium concept, operators, functions,
-and which objects determine which — together with the criteria for when two of
-them are the same ([Gruber 1993](#ref-gruber1993); [Guarino, Oberle and Staab 2009](#ref-guarino2009)).
+The economic and mathematical entities and relations within the domain
+(agents, states, shocks, timing, the equilibrium concept, operators,
+functions, and which objects determine which), together with the criteria
+for when two of them are the same ([Gruber 1993](#ref-gruber1993); [Guarino, Oberle and Staab 2009](#ref-guarino2009)).
 The ontology is stated in its own terms, without reference to the syntax.
 2. **Denotation: what stands for what.**
 The meaning of the ontology's objects.
 The meaning takes the form of relationships between the mathematical, economic
-and computational representations — for instance, value functions as economic
+and computational representations, for instance value functions as economic
 concepts, instantiated on a mathematical space, and approximated on the
 computer.
 Typically the denotations will also include relationships between these

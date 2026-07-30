@@ -16,13 +16,16 @@
   padding-bottom: 0.3rem; margin-top: 2.2rem; }
 .myst-article h3 { color: #00796b; margin-top: 1.8rem; }
 .displaybox::before { color: #00695c; }
-/* PDF download button under the title */
-.pdf-button { display: inline-block; margin: 0.6rem 0 0.2rem;
-  padding: 0.45rem 0.9rem; border: 1px solid #00695c; border-radius: 3px;
-  color: #00695c; font-weight: 600; text-decoration: none; font-size: 0.9rem; }
-.pdf-button:hover { background: #00695c; color: #fff; }
 /* Long URLs in the reference list wrap instead of overflowing */
 .myst-article a { overflow-wrap: anywhere; }
 /* Page subtitle under the title, larger than the author line */
 .page-subtitle { font-size: 1.3rem; font-weight: 600; color: #333;
   margin: 0.15rem 0 0.35rem; }
+/* Working-group line under the authors */
+.wg-line { font-style: italic; font-size: 0.95rem; color: #333;
+  margin: 0.4rem 0 0.5rem; }
+/* Compact PDF download control */
+.pdf-button { display: inline-flex; align-items: center; gap: 0.3rem;
+  padding: 0.28rem 0.5rem; border: 1px solid #c9c9c9; border-radius: 4px;
+  color: #445; line-height: 0; }
+.pdf-button:hover { border-color: #00695c; color: #00695c; }

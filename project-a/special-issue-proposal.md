@@ -7,8 +7,8 @@ authors:
 abstract: |
   A computed model's meaning is largely implicit in prose, notation,
   calibration, and code. Professional convention has helped fill the gaps.
-  But economists now use large language models (AIs) to write, modify,
-  and translate modeling code, and AI output is probabilistic by
+  But economists increasingly use large language models (AIs) to write,
+  modify, and translate modeling code, and AI output is probabilistic by
   construction.
   Unverified, such code can compute a different model from the one
   intended, its results cannot be cross-checked or reused, and its economic

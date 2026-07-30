@@ -23,7 +23,6 @@
 .pdf-button:hover { background: #00695c; color: #fff; }
 /* Long URLs in the reference list wrap instead of overflowing */
 .myst-article a { overflow-wrap: anywhere; }
-/* Working-group subtitle under the authors */
-.myst-article-header-fm::after {
-  content: "Society for Computational Economics Working Group No. 1 on Language and Formal Semantics";
-  display: block; font-style: italic; margin-top: 0.5rem; font-size: 0.95rem; }
+/* Page subtitle under the title, larger than the author line */
+.page-subtitle { font-size: 1.3rem; font-weight: 600; color: #333;
+  margin: 0.15rem 0 0.35rem; }

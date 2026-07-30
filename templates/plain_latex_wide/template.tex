@@ -1,18 +1,19 @@
 \documentclass[12pt]{article}
-\usepackage[margin=1.5in]{geometry}
+\usepackage[margin=1.25in]{geometry}
 \usepackage{hyperref}
 \usepackage{xurl}
-\usepackage{datetime}
 \usepackage{graphicx}
 \usepackage{natbib}
 \usepackage{newtxtext}
 \usepackage{newtxmath}
 \usepackage{microtype}
+\usepackage{titling}
+\setlength{\droptitle}{-4.5em}
 \usepackage{setspace}
-\setstretch{1.1}
+\setstretch{1.03}
 \usepackage[defaultlines=3,all]{nowidow}
 \raggedbottom
-\setlength{\parskip}{0.4em plus 0.1em}
+\setlength{\parskip}{0.3em plus 0.1em}
 \usepackage{titlesec}
 \titleformat*{\section}{\large\bfseries}
 \titleformat*{\subsection}{\normalsize\bfseries}
@@ -52,13 +53,13 @@
 }
 [# endif #]
 
-\title{[-doc.title-]}
+\title{[-doc.title-][# if doc.subtitle #]\\[0.4em]{\large [-doc.subtitle-]}[# endif #]}
 
 \author{\parbox{0.8\textwidth}{\centering [-doc.authors|join(" and ", "name")-]}}
 
-\newdateformat{plaindate}{\monthname[\THEMONTH] \THEDAY, \THEYEAR}
-\newdate{articleDate}{[-doc.date.day-]}{[-doc.date.month-]}{[-doc.date.year-]}
-\date{\plaindate\displaydate{articleDate}}
+\date{\ifcase [-doc.date.month-] \or January\or February\or March\or
+  April\or May\or June\or July\or August\or September\or October\or
+  November\or December\fi~[-doc.date.day-], [-doc.date.year-]}
 
 \begin{document}
 \maketitle

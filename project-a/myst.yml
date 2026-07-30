@@ -1,10 +1,10 @@
 # MyST config for the special-issue proposal (self-contained in project-a/)
 version: 1
 project:
-  title: Special Issue Proposal — Semantic Ontologies in Economics
+  title: Semantic Ontologies in Economics
   authors:
-    - name: Akshay Shanker
     - name: Christopher Carroll
+    - name: Akshay Shanker
   toc:
     - file: special-issue-proposal.md
 site:

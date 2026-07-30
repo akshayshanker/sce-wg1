@@ -226,38 +226,45 @@ the semantic ontology of its domain of study.
 However, the researchers choose the formalism in which they state these
 components.
 
-Broadly, a team can choose among three families of formalism, which differ
-in how much meaning they fix ([Uschold and Grüninger 1996](#ref-uschold1996)).
-The first family, *mathematical semantics*, translates representations into
-mathematical structures and proves properties of the translation: a team may
-assign each written form an object in the ordered
-structures of domain theory (denotational semantics; [Scott and Strachey 1971](#ref-scott1971)), construct meaning as the unique homomorphism from a many-sorted
-algebra of terms (initial-algebra semantics; [Goguen, Thatcher, Wagner and Wright 1977](#ref-goguen1977)), interpret a typed syntax in a category with matching structure
-(typed categories; [Lambek and Scott 1986](#ref-lambek1986)), write rules specifying execution
-on an abstract machine (operational semantics; [Plotkin 1981](#ref-plotkin1981)), or state the
-assertions that hold before and after execution (axiomatic semantics; [Hoare 1969](#ref-hoare1969)).
+The available formalisms differ in how much meaning they fix, and they can
+be ordered from least to most ([Uschold and Grüninger 1996](#ref-uschold1996)).
 
-Where mathematical semantics builds a map for the domain's own syntax, the
-second family, *logical axiomatization*, writes the ontology as axioms in an
-existing formal logic — in current practice a description logic — and the
-logic's ready-made model theory then fixes the admissible interpretations
+At one end, a team records which entities exist and which relations connect
+them, as boxes and arrows: an entity-relationship diagram
+([Chen 1976](#ref-chen1976)), a UML class diagram
+([Berardi, Calvanese and De Giacomo 2005](#ref-berardi2005)), or a knowledge
+graph ([Hogan et al. 2021](#ref-hogan2021)).
+These *graphs and diagrams* name the model's objects but place few
+restrictions on what they mean.
+
+Writing the ontology as *logical axioms* fixes more: the axioms rule out
+interpretations of the objects much as parameter restrictions rule out
+models, and in current practice they are written in a description logic
 ([Gruber 1993](#ref-gruber1993); [Baader et al. 2017](#ref-baader2017)).
 
-The third family, *graphs and diagrams*, imposes few or no restrictions:
-it records which entities exist and which relations connect them, as boxes
-and arrows, in an entity-relationship diagram ([Chen 1976](#ref-chen1976)),
-a UML class diagram ([Berardi, Calvanese and De Giacomo 2005](#ref-berardi2005)),
-or a knowledge graph ([Hogan et al. 2021](#ref-hogan2021)).
-The last two families overlap, since a knowledge graph written in a web
-ontology language is at once a graph and a logical theory.
+The most is fixed by the *mathematical semantics* developed for programming
+languages, which attach an explicit mathematical meaning to every written
+form: denotational semantics assigns each form an object in the ordered
+structures of domain theory ([Scott and Strachey 1971](#ref-scott1971));
+initial-algebra semantics takes meaning to be the unique homomorphism from a
+many-sorted algebra of terms
+([Goguen, Thatcher, Wagner and Wright 1977](#ref-goguen1977)); typed
+categories interpret a typed syntax in a category with matching structure
+([Lambek and Scott 1986](#ref-lambek1986)); operational semantics gives
+rules for execution on an abstract machine
+([Plotkin 1981](#ref-plotkin1981)); and axiomatic semantics gives the
+assertions that hold before and after execution
+([Hoare 1969](#ref-hoare1969)).
 
-Different fields have made different choices: programming-language
-researchers state meaning mathematically, biomedical consortia axiomatize
-their ontologies in description logic ([Ashburner et al. 2000](#ref-ashburner2000)), and industry
-records knowledge graphs from observed data, without axioms ([Noy et al. 2019](#ref-noy2019)).
+Different fields settle at different points on this scale: industry records
+knowledge graphs from observed data, without axioms
+([Noy et al. 2019](#ref-noy2019)); biomedical consortia axiomatize their
+ontologies in description logic
+([Ashburner et al. 2000](#ref-ashburner2000)); and programming-language
+researchers state full mathematical semantics.
 
-Which family fits a paper depends on whether its domain of study has a
-syntax.
+How far along this scale a paper goes depends on whether its domain of
+study has a syntax.
 A team whose domain has one — a modeling language or a toolkit — can use any
 of the mathematical semantics; a team whose ontology has no syntax — a model
 class, or an empirical method before its specification is constructed — can

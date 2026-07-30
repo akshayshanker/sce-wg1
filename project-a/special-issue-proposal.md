@@ -121,9 +121,10 @@ never-written conceptual models of the business from its data and business
 processes ([AWS Database Blog 2026](#ref-aws2026)).
 Compared with all of these, economics is well placed: the relations among a
 model's objects are the theory itself, already stated precisely in the paper.
-What is missing is the attachment of that theory to the files and function
-calls that compute it, and supplying the attachment is the work this issue
-proposes.
+What remains unstated is the map from the representations economists compute
+with — model files, toolkit calls, estimation specifications — to that
+theory, and the conditions under which the map holds.
+Stating these maps, domain by domain, is the work this issue proposes.
 
 <!--
 [^example]: For example, the sentence "a policy shock raises entrants at date
@@ -137,6 +138,14 @@ computational formulations and return identical estimates, while Dubé, Fox and
 Su (2012) show a loose inner-loop tolerance changing estimated own-price
 elasticities by roughly a factor of two.
 -->
+
+[^cg]: Whichever domain a paper addresses, its theory and mathematics are
+taken as pre-existing — the Bellman equation is not in question; what a given
+Dynare file or HARK model means is. A language, toolkit, or empirical-method
+paper therefore emphasizes the map from representations to the mathematical
+objects they stand for, while a model-class paper emphasizes the objects and relations
+implied by its mathematical and theoretical framework. Differences among the stated ontologies
+are results for the closing comparison to report.
 
 [^ha]: In a heterogeneous-agent model, for instance, the ontology contains the
 response of decision rules to prices, the cross-sectional distribution
@@ -155,7 +164,7 @@ standardizes comparison, not meaning.
 **Domains of study.**
 Each paper in the special issue will address one *domain of study*.
 Domains of study can include a modeling language, a toolkit, an empirical
-method, a model class, or a combination of these.
+method, a model class, or a combination of these.[^cg]
 
 ```{raw:tex}
 \begin{displaybox}[breakable]{Domains of study}
@@ -173,12 +182,13 @@ method, a model class, or a combination of these.
   the sequence-space Jacobian toolkit ([Auclert et al. 2021](#ref-auclert2021)), or the VFI
   Toolkit.
 - **Estimation and empirical methods.**
-  An empirical method takes a model to data: it states which measured objects
-  stand for the model's quantities, prices, and shocks, which classifications
-  organize them, and which transformations construct the inputs to estimation
-  or calibration, as in the simulated method of moments, indirect inference,
-  or the social accounting matrices and input-output tables to which
-  computable general-equilibrium models are calibrated.
+  An empirical method takes a model to data.
+  It states which measured objects stand for the model's quantities (for
+  example, prices and shocks); which classifications organize them; and
+  which transformations construct the inputs to estimation or calibration.
+  The simulated method of moments and indirect inference are cases, as are
+  the social accounting matrices and input-output tables to which computable
+  general-equilibrium models are calibrated.
 - **Model classes.**
   A model class is a family of models built from the same kinds of objects, as
   in heterogeneous-agent macroeconomies or overlapping-generations economies.
@@ -189,26 +199,15 @@ method, a model class, or a combination of these.
 \end{displaybox}
 ```
 
-Whichever domain of study a paper addresses, its theory and mathematics are
-taken as pre-existing: the Bellman equation is not in question, while what a
-given Dynare file or HARK model means is.
-For a language, a toolkit, or an empirical method, the semantic ontology may
-therefore emphasize the map from computational representations and procedures
-to the mathematical objects they stand for.
-A model-class domain of study, by contrast, may place greater emphasis on the
-objects and relations of the mathematics itself.
-Where the stated ontologies differ across papers, the difference is itself a
-result for the closing comparison to report.
-
 <!--
 AAS to AAS: I am not sure about the third sentence above, for review.
 -->
 
 **Research themes.**
-The research themes of the issue are the two tasks every paper shares:
-first, constructing a semantic ontology for its domain of study, and second, establishing
-the ontology's *metatheory*, statements about the ontology rather than
-components of it.
+The research themes of the issue are two of the core research questions
+each paper will answer: first, constructing a semantic ontology for its
+domain of study, and second, establishing the ontology's *metatheory*,
+statements about the ontology rather than components of it.
 There are three components to each semantic ontology: what is assumed to exist
 (the *ontology*), what stands for and relates to what (the *denotation*), and
 what is written down (the *syntax*).
@@ -260,7 +259,7 @@ rules for execution on an abstract machine
 assertions that hold before and after execution
 ([Hoare 1969](#ref-hoare1969)).
 
-Practice differs by field: Google and other
+Practice differs by field. Google and other
 technology firms record knowledge graphs from observed data, without axioms
 ([Noy et al. 2019](#ref-noy2019)); the Gene Ontology Consortium states its
 ontology of gene functions in description logic
@@ -275,6 +274,9 @@ A team whose domain has one — a modeling language or a toolkit — can use any
 of the mathematical semantics; a team whose ontology has no syntax — a model
 class, or an empirical method before its specification is constructed — can
 axiomatize the ontology in a logic or record it as a graph.
+Declarative languages make the mathematical route easiest: a Dynare or Dolo
+file states the model itself rather than a procedure for solving it, so the
+file is already the kind of written form a semantic map can interpret.
 A team seeking machine-checked guarantees can go further and formalize its
 domain in a proof assistant such as Lean, defining the model objects as
 types and the file-to-object map as a function inside the system, so that

@@ -146,7 +146,7 @@ standardizes comparison, not meaning.
 
 ## Guidelines for Papers
 
-### Research Themes and Domains
+### Research Domains and Themes
 
 **Domains of study.**
 Each paper in the special issue will address one *domain of study*.

@@ -1,5 +1,8 @@
 ---
 title: Special Issue on Semantic Ontologies in Economics
+subtitle: >-
+  Society for Computational Economics Working Group No. 1 on Language and
+  Formal Semantics
 authors:
   - name: Akshay Shanker
   - name: Christopher Carroll
@@ -30,7 +33,8 @@ downloads:
     title: Proposal (PDF)
 ---
 
-# Special Issue Proposal — Semantic Ontologies in Economics
+*Society for Computational Economics Working Group No. 1 on Language and
+Formal Semantics.*
 
 ## Introduction and Proposal
 

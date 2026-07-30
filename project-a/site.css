@@ -32,3 +32,13 @@
 /* Tighten the gap between the title block and the abstract */
 .myst-article { padding-top: 0.25rem; }
 .myst-article-header-content { margin-top: 1.25rem; margin-bottom: 0; }
+/* Dark-theme variants: keep every custom element legible on dark ground */
+html.dark .displaybox { background: #1d1f21; border-color: #555; }
+html.dark .displaybox::before { color: #4db6ac; border-bottom-color: #444; }
+html.dark .myst-article h2 { color: #4db6ac;
+  border-bottom-color: rgba(77, 182, 172, 0.35); }
+html.dark .myst-article h3 { color: #80cbc4; }
+html.dark .wg-line { color: #c9c9c9; }
+html.dark .page-subtitle { color: #ddd; }
+html.dark .pdf-button { border-color: #666; color: #b5b5b5; }
+html.dark .pdf-button:hover { border-color: #4db6ac; color: #4db6ac; }

@@ -239,8 +239,10 @@ restrictions on what they mean.
 
 Writing the ontology as *logical axioms* fixes more: the axioms rule out
 interpretations of the objects much as parameter restrictions rule out
-models, and in current practice they are written in a description logic
-([Gruber 1993](#ref-gruber1993); [Baader et al. 2017](#ref-baader2017)).
+models, and in current practice they are written in a description logic,
+standardized as the Semantic Web's Web Ontology Language (OWL)
+([Gruber 1993](#ref-gruber1993); [Baader et al. 2017](#ref-baader2017);
+[W3C OWL Working Group 2012](#ref-owl2012)).
 
 The most is fixed by the *mathematical semantics* developed for programming
 languages, which attach an explicit mathematical meaning to every written
@@ -447,6 +449,11 @@ Polytechnic Institute of Brooklyn, 19–46.
 Uschold, M., and M. Grüninger (1996). "Ontologies: principles, methods and
 applications." *The Knowledge Engineering Review* 11(2), 93–136.
 [[link]](https://www.aiai.ed.ac.uk/project/oplan/documents/1996/96-ker-intro-ontologies.pdf)
+
+(ref-owl2012)=
+W3C OWL Working Group (2012). *OWL 2 Web Ontology Language Document
+Overview*, 2nd ed. W3C Recommendation.
+[[link]](https://www.w3.org/TR/owl2-overview/)
 
 (ref-wieland2012)=
 Wieland, V., T. Cwik, G. J. Müller, S. Schmidt, and M. Wolters (2012). "A new

@@ -239,9 +239,11 @@ restrictions on what they mean.
 
 Writing the ontology as *logical axioms* fixes more: the axioms rule out
 interpretations of the objects much as parameter restrictions rule out
-models, and in current practice they are written in a description logic,
-standardized as the Semantic Web's Web Ontology Language (OWL)
-([Gruber 1993](#ref-gruber1993); [Baader et al. 2017](#ref-baader2017);
+models.
+The axioms can be stated in any formal logic — in the older tradition
+first-order logic ([Gruber 1993](#ref-gruber1993)), and in much current
+practice a description logic such as the Semantic Web's Web Ontology
+Language (OWL) ([Baader et al. 2017](#ref-baader2017);
 [W3C OWL Working Group 2012](#ref-owl2012)).
 
 The most is fixed by the *mathematical semantics* developed for programming

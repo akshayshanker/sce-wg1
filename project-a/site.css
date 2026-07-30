@@ -23,12 +23,6 @@
 .pdf-button:hover { background: #00695c; color: #fff; }
 /* Long URLs in the reference list wrap instead of overflowing */
 .myst-article a { overflow-wrap: anywhere; }
-/* Fixed download button, outside the app root so hydration keeps it */
-.pdf-fab { position: fixed; top: 0.8rem; right: 4rem; z-index: 50;
-  padding: 0.45rem 0.9rem; border: 1px solid #00695c; border-radius: 4px;
-  background: #fff; color: #00695c; font-weight: 600; font-size: 0.9rem;
-  text-decoration: none; box-shadow: 0 1px 3px rgba(0,0,0,0.10); }
-.pdf-fab:hover { background: #00695c; color: #fff; }
 /* Working-group subtitle under the authors */
 .myst-article-header-fm::after {
   content: "Society for Computational Economics Working Group No. 1 on Language and Formal Semantics";

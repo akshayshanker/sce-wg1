@@ -1,5 +1,5 @@
 ---
-title: Special Issue Proposal — Semantic Ontologies in Economics
+title: Special Issue on Semantic Ontologies in Economics
 authors:
   - name: Akshay Shanker
   - name: Christopher Carroll
@@ -233,16 +233,18 @@ algebra of terms (initial-algebra semantics; [Goguen, Thatcher, Wagner and Wrigh
 on an abstract machine (operational semantics; [Plotkin 1981](#ref-plotkin1981)), or state the
 assertions that hold before and after execution (axiomatic semantics; [Hoare 1969](#ref-hoare1969)).
 
-Where mathematical semantics interprets a syntax, the second family,
-*logical axiomatization*, states the ontology directly, as a theory whose
-models are its admissible interpretations, in current practice a description
-logic ([Gruber 1993](#ref-gruber1993); [Baader et al. 2017](#ref-baader2017)).
+Where mathematical semantics builds a map for the domain's own syntax, the
+second family, *logical axiomatization*, writes the ontology as axioms in an
+existing formal logic — in current practice a description logic — and the
+logic's ready-made model theory then fixes the admissible interpretations
+([Gruber 1993](#ref-gruber1993); [Baader et al. 2017](#ref-baader2017)).
 
-When even axioms are more structure than a domain supports, the third
-family, *graphs and diagrams*, records entities and relations with little or
-no axiomatization — an entity-relationship diagram ([Chen 1976](#ref-chen1976)),
-a UML class diagram ([Berardi, Calvanese and De Giacomo 2005](#ref-berardi2005)),
-or a knowledge graph ([Hogan et al. 2021](#ref-hogan2021)).
+Where logical axiomatization states a theory, the third family, *graphs and
+diagrams*, records only the entities and relations — an entity-relationship
+diagram ([Chen 1976](#ref-chen1976)), a UML class diagram
+([Berardi, Calvanese and De Giacomo 2005](#ref-berardi2005)), or a knowledge
+graph ([Hogan et al. 2021](#ref-hogan2021)) — with little or no
+axiomatization.
 The last two families overlap, since a knowledge graph written in a web
 ontology language is at once a graph and a logical theory.
 
@@ -312,79 +314,79 @@ Calendar dates TBC on acceptance.
 (ref-ashburner2000)=
 Ashburner, M., C. A. Ball, J. A. Blake, et al. (2000). "Gene Ontology: tool
 for the unification of biology." *Nature Genetics* 25(1), 25–29.
-[www.nature.com/articles/ng0500_25](https://www.nature.com/articles/ng0500_25)
+[[link]](https://www.nature.com/articles/ng0500_25)
 
 (ref-auclert2021)=
 Auclert, A., B. Bardóczy, M. Rognlie, and L. Straub (2021). "Using the
 Sequence-Space Jacobian to Solve and Estimate Heterogeneous-Agent Models."
 *Econometrica* 89(5), 2375–2408.
-[mrognlie.github.io/papers/sequence_space_jacobian.pdf](https://mrognlie.github.io/papers/sequence_space_jacobian.pdf)
+[[link]](https://mrognlie.github.io/papers/sequence_space_jacobian.pdf)
 
 (ref-aws2026)=
 AWS Database Blog (2026). "Build a semantic ontology to power AI assistants on
 AWS — Part 1." 14 July 2026. Accessed 29 July 2026.
-[aws.amazon.com/blogs/database/build-a-semantic-ontology-to-power-ai-assistants-on-aws-part-1](https://aws.amazon.com/blogs/database/build-a-semantic-ontology-to-power-ai-assistants-on-aws-part-1/)
+[[link]](https://aws.amazon.com/blogs/database/build-a-semantic-ontology-to-power-ai-assistants-on-aws-part-1/)
 
 (ref-baader2017)=
 Baader, F., I. Horrocks, C. Lutz, and U. Sattler (2017). *An Introduction to
 Description Logic*. Cambridge University Press.
-[www.cambridge.org/core/books/an-introduction-to-description-logic/6D329698AFC2E6C6C5C15801ED9B6D07](https://www.cambridge.org/core/books/an-introduction-to-description-logic/6D329698AFC2E6C6C5C15801ED9B6D07)
+[[link]](https://www.cambridge.org/core/books/an-introduction-to-description-logic/6D329698AFC2E6C6C5C15801ED9B6D07)
 
 (ref-berardi2005)=
 Berardi, D., D. Calvanese, and G. De Giacomo (2005). "Reasoning on UML Class
 Diagrams." *Artificial Intelligence* 168(1–2), 70–118.
-[www.inf.unibz.it/~calvanese/papers/bera-calv-degi-AIJ-2005.pdf](https://www.inf.unibz.it/~calvanese/papers/bera-calv-degi-AIJ-2005.pdf)
+[[link]](https://www.inf.unibz.it/~calvanese/papers/bera-calv-degi-AIJ-2005.pdf)
 
 (ref-bock2005)=
 Bock, C., and M. Grüninger (2005). "PSL: A Semantic Domain for Flow Models."
 *Software and Systems Modeling* 4(2), 209–231.
-[www.nist.gov/publications/psl-semantic-domain-flow-models](https://www.nist.gov/publications/psl-semantic-domain-flow-models)
+[[link]](https://www.nist.gov/publications/psl-semantic-domain-flow-models)
 
 (ref-chen1976)=
 Chen, P. P. (1976). "The Entity-Relationship Model — Toward a Unified View of
 Data." *ACM Transactions on Database Systems* 1(1), 9–36.
-[dl.acm.org/doi/10.1145/320434.320440](https://dl.acm.org/doi/10.1145/320434.320440)
+doi:10.1145/320434.320440
 
 (ref-demoura2021)=
 de Moura, L., and S. Ullrich (2021). "The Lean 4 Theorem Prover and
 Programming Language." In *Automated Deduction — CADE 28*, Lecture Notes in
 Artificial Intelligence 12699. Springer, 625–635.
-[link.springer.com/chapter/10.1007/978-3-030-79876-5_37](https://link.springer.com/chapter/10.1007/978-3-030-79876-5_37)
+doi:10.1007/978-3-030-79876-5_37
 
 (ref-fox2003)=
 Fox, M., and D. Long (2003). "PDDL2.1: An Extension to PDDL for Expressing
 Temporal Planning Domains." *Journal of Artificial Intelligence Research* 20,
 61–124.
-[jair.org/index.php/jair/article/view/10352](https://jair.org/index.php/jair/article/view/10352)
+[[link]](https://jair.org/index.php/jair/article/view/10352)
 
 (ref-fritzson1998)=
 Fritzson, P., and V. Engelson (1998). "Modelica — A Unified Object-Oriented
 Language for System Modeling and Simulation." In *ECOOP '98 — Object-Oriented
 Programming*, Lecture Notes in Computer Science 1445. Springer, 67–90.
-[link.springer.com/chapter/10.1007/BFb0054087](https://link.springer.com/chapter/10.1007/BFb0054087)
+doi:10.1007/BFb0054087
 
 (ref-gleeson2010)=
 Gleeson, P., S. Crook, R. C. Cannon, M. L. Hines, G. O. Billings, et al.
 (2010). "NeuroML: A Language for Describing Data Driven Models of Neurons and
 Networks with a High Degree of Biological Detail." *PLoS Computational
 Biology* 6(6), e1000815.
-[journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1000815](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1000815)
+doi:10.1371/journal.pcbi.1000815
 
 (ref-goguen1977)=
 Goguen, J. A., J. W. Thatcher, E. G. Wagner, and J. B. Wright (1977).
 "Initial Algebra Semantics and Continuous Algebras." *Journal of the ACM*
 24(1), 68–95.
-[dl.acm.org/doi/10.1145/321992.321997](https://dl.acm.org/doi/10.1145/321992.321997)
+doi:10.1145/321992.321997
 
 (ref-gruber1993)=
 Gruber, T. R. (1993). "A translation approach to portable ontology
 specifications." *Knowledge Acquisition* 5(2), 199–220.
-[tomgruber.org/writing/ontolingua-kaj-1993.pdf](https://tomgruber.org/writing/ontolingua-kaj-1993.pdf)
+[[link]](https://tomgruber.org/writing/ontolingua-kaj-1993.pdf)
 
 (ref-guarino2009)=
 Guarino, N., D. Oberle, and S. Staab (2009). "What Is an Ontology?" In S.
 Staab and R. Studer (eds.), *Handbook on Ontologies*, 2nd ed. Springer, 1–17.
-[iaoa.org/isc2012/docs/Guarino2009_What_is_an_Ontology.pdf](https://iaoa.org/isc2012/docs/Guarino2009_What_is_an_Ontology.pdf)
+[[link]](https://iaoa.org/isc2012/docs/Guarino2009_What_is_an_Ontology.pdf)
 
 (ref-gruninger2003)=
 Grüninger, M., and C. Menzel (2003). "The Process Specification Language
@@ -394,32 +396,32 @@ doi:10.1609/aimag.v24i3.1719
 (ref-harel2004)=
 Harel, D., and B. Rumpe (2004). "Meaningful modeling: what's the semantics of
 'semantics'?" *Computer* 37(10), 64–72.
-[www.se-rwth.de/staff/rumpe/publications20042008/Meaningful-Modeling-Whats-the-Semantics-of-Semantics.pdf](https://www.se-rwth.de/staff/rumpe/publications20042008/Meaningful-Modeling-Whats-the-Semantics-of-Semantics.pdf)
+[[link]](https://www.se-rwth.de/staff/rumpe/publications20042008/Meaningful-Modeling-Whats-the-Semantics-of-Semantics.pdf)
 
 (ref-hoare1969)=
 Hoare, C. A. R. (1969). "An axiomatic basis for computer programming."
 *Communications of the ACM* 12(10), 576–580.
-[dl.acm.org/doi/10.1145/363235.363259](https://dl.acm.org/doi/10.1145/363235.363259)
+doi:10.1145/363235.363259
 
 (ref-hogan2021)=
 Hogan, A., E. Blomqvist, M. Cochez, C. d'Amato, G. de Melo, et al. (2021).
 "Knowledge Graphs." *ACM Computing Surveys* 54(4), article 71.
-[dl.acm.org/doi/10.1145/3447772](https://dl.acm.org/doi/10.1145/3447772)
+doi:10.1145/3447772
 
 (ref-lambek1986)=
 Lambek, J., and P. J. Scott (1986). *Introduction to Higher Order Categorical
 Logic*. Cambridge University Press.
-[www.cambridge.org/us/universitypress/subjects/mathematics/logic-categories-and-sets/introduction-higher-order-categorical-logic](https://www.cambridge.org/us/universitypress/subjects/mathematics/logic-categories-and-sets/introduction-higher-order-categorical-logic)
+[[link]](https://www.cambridge.org/us/universitypress/subjects/mathematics/logic-categories-and-sets/introduction-higher-order-categorical-logic)
 
 (ref-modelica2023)=
 Modelica Association (2023). *Modelica Language Specification*, version 3.6.
-[specification.modelica.org/maint/3.6/.](https://specification.modelica.org/maint/3.6/.)
+[[link]](https://specification.modelica.org/maint/3.6/.)
 
 (ref-noy2019)=
 Noy, N., Y. Gao, A. Jain, A. Narayanan, A. Patterson, and J. Taylor (2019).
 "Industry-scale knowledge graphs: lessons and challenges." *Communications of
 the ACM* 62(8), 36–43.
-[cacm.acm.org/practice/industry-scale-knowledge-graphs](https://cacm.acm.org/practice/industry-scale-knowledge-graphs/)
+[[link]](https://cacm.acm.org/practice/industry-scale-knowledge-graphs/)
 
 (ref-plotkin1981)=
 Plotkin, G. D. (1981). *A Structural Approach to Operational Semantics*.
@@ -429,12 +431,12 @@ Report DAIMI FN-19, Computer Science Department, Aarhus University.
 Scott, D., and C. Strachey (1971). "Toward a mathematical semantics for
 computer languages." *Proceedings of the Symposium on Computers and Automata*,
 Polytechnic Institute of Brooklyn, 19–46.
-[ncatlab.org/nlab/files/ScottStrachey-MathematicalSemantics.pdf](https://ncatlab.org/nlab/files/ScottStrachey-MathematicalSemantics.pdf)
+[[link]](https://ncatlab.org/nlab/files/ScottStrachey-MathematicalSemantics.pdf)
 
 (ref-uschold1996)=
 Uschold, M., and M. Grüninger (1996). "Ontologies: principles, methods and
 applications." *The Knowledge Engineering Review* 11(2), 93–136.
-[www.aiai.ed.ac.uk/project/oplan/documents/1996/96-ker-intro-ontologies.pdf](https://www.aiai.ed.ac.uk/project/oplan/documents/1996/96-ker-intro-ontologies.pdf)
+[[link]](https://www.aiai.ed.ac.uk/project/oplan/documents/1996/96-ker-intro-ontologies.pdf)
 
 (ref-wieland2012)=
 Wieland, V., T. Cwik, G. J. Müller, S. Schmidt, and M. Wolters (2012). "A new
@@ -447,7 +449,7 @@ doi:10.1016/j.jebo.2012.01.006
 \appendix
 ```
 
-## Appendix A: Research Themes
+## Research Themes
 
 A paper addresses those of the following five research themes relevant to its
 domain of study.

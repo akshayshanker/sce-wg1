@@ -1,11 +1,24 @@
 \documentclass[12pt]{article}
 \usepackage[margin=1.5in]{geometry}
 \usepackage{hyperref}
+\usepackage{xurl}
 \usepackage{datetime}
 \usepackage{graphicx}
 \usepackage{natbib}
+\usepackage{newtxtext}
+\usepackage{newtxmath}
+\usepackage{microtype}
+\usepackage{setspace}
+\setstretch{1.1}
+\usepackage[defaultlines=3,all]{nowidow}
+\raggedbottom
+\setlength{\parskip}{0.4em plus 0.1em}
+\usepackage{titlesec}
+\titleformat*{\section}{\large\bfseries}
+\titleformat*{\subsection}{\normalsize\bfseries}
 \usepackage[most]{tcolorbox}
 \usepackage{enumitem}
+\setlist{noitemsep}
 % Titled display box (optional extra keys; argument: small-caps title)
 \newtcolorbox{displaybox}[2][]{
   #1,
@@ -31,7 +44,7 @@
 [-IMPORTS-]
 
 % colors for hyperlinks
-\hypersetup{colorlinks=true, allcolors=blue}
+\hypersetup{colorlinks=true, allcolors=blue!50!black}
 
 [# if options.logo #]
 \newcommand{\logo}{
@@ -41,10 +54,12 @@
 
 \title{[-doc.title-]}
 
-\author{\small [-doc.authors|join(" \\and ", "name")-]}
+\author{\parbox{0.8\textwidth}{\centering [-doc.authors|join(" and ", "name")-]\\[0.55em]
+  {\small\itshape Society for Computational Economics Working Group No.~1 on Language and Formal Semantics}}}
 
+\newdateformat{plaindate}{\monthname[\THEMONTH] \THEDAY, \THEYEAR}
 \newdate{articleDate}{[-doc.date.day-]}{[-doc.date.month-]}{[-doc.date.year-]}
-\date{\displaydate{articleDate}}
+\date{\plaindate\displaydate{articleDate}}
 
 \begin{document}
 \maketitle

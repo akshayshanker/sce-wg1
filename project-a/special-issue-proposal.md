@@ -243,12 +243,11 @@ existing formal logic — in current practice a description logic — and the
 logic's ready-made model theory then fixes the admissible interpretations
 ([Gruber 1993](#ref-gruber1993); [Baader et al. 2017](#ref-baader2017)).
 
-Where logical axiomatization states a theory, the third family, *graphs and
-diagrams*, records only the entities and relations — an entity-relationship
-diagram ([Chen 1976](#ref-chen1976)), a UML class diagram
-([Berardi, Calvanese and De Giacomo 2005](#ref-berardi2005)), or a knowledge
-graph ([Hogan et al. 2021](#ref-hogan2021)) — with little or no
-axiomatization.
+The third family, *graphs and diagrams*, imposes few or no restrictions:
+it records which entities exist and which relations connect them, as boxes
+and arrows, in an entity-relationship diagram ([Chen 1976](#ref-chen1976)),
+a UML class diagram ([Berardi, Calvanese and De Giacomo 2005](#ref-berardi2005)),
+or a knowledge graph ([Hogan et al. 2021](#ref-hogan2021)).
 The last two families overlap, since a knowledge graph written in a web
 ontology language is at once a graph and a logical theory.
 

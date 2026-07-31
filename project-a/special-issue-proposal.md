@@ -37,9 +37,11 @@ When economists compute a model, its precise *meaning* is
 distributed, much of it implicitly, across prose, notation, calibration, and
 code.
 The paper says "we solve the following model", but its equations
-underdetermine both what its code computes and what the computations mean,
-leaving the reader to fill the gaps.
-The same gaps confront whoever rebuilds or extends the model.
+underdetermine both what its code computes and what the computations mean.
+Only an informed reader can fill the gaps, one who knows the surrounding
+literature and has absorbed, by working inside it, the conventions and
+traditions the paper leaves unstated.
+The same gaps confronts anyone who wants to interpretp the model's findings, or rebuilds or extends the model.
 As a result, without a concrete statement of the model's meaning to check against,
 computational results are hard to cross-verify, and interoperability between
 implementations becomes difficult.
@@ -52,10 +54,12 @@ translate modeling code.
 To interpret or verify AI output we need a statement, independent of the
 code, of which economic objects are computed and which relations among them
 are enforced; we call such statements *semantic ontologies*.
-Without semantic ontologies, AI use is prone to error and misunderstanding.
+Outside economics, the use of semantic ontologies has grown rapidly,
+because without them AI use is prone to error and misunderstanding (see
+[Semantic Ontologies](#semantic-ontologies) below).
 With semantic ontologies, translating models between toolkits, and even
 generating new modeling research, become operations a language model can
-carry out and be checked on cheaply, rather than manual recoding.[^mmb]
+carry out and be checked on cheaply, rather than manual recoding.
 
 ```{raw:tex}
 \begin{displaybox}[breakable]{Proposed special issue}
@@ -64,15 +68,29 @@ carry out and be checked on cheaply, rather than manual recoding.[^mmb]
 ::::{div}
 :class: displaybox displaybox-proposal
 
-We propose a special issue that collects semantic ontologies for the domains
-of computational economics: modeling languages, toolkits, empirical methods,
-and model classes.
-Each paper takes one domain of study, states its semantic ontology, and
+We propose a special issue that constructs semantic ontologies for the
+domains of computational economics: domain-specific modeling languages (for
+example, Dynare), toolkits (for example, HARK and SSJ), empirical methods
+(for example, structural modeling and estimation), and model classes (for
+example, life-cycle, real-business-cycle, and agent-based models).
+Each paper takes one domain of study, proposes a semantic ontology, and
 demonstrates it on worked examples of the team's own choosing.
+In addition to the semantic ontologies, the working group will author a
+paper and a community resource of canonical models and their
+ontologies.[^mmb]
+<!-- Matt: this is a key passage, please put it in your words. -->
+The special issue will also include related contributions by the working
+group that use the stated ontologies to compare different modeling
+strategies for the same problem, for instance agent-based models against
+heterogeneous-agent models.
+
 The SCE working group will submit a subset of the papers, an open call will
 invite the rest, and a comparison paper, written jointly by the participating
 teams, will close the issue.
 
+The semantic ontologies we develop will be kept in an open-source GitHub
+repository, to which members of the community can contribute improvements
+and modifications.
 ::::
 
 ```{raw:tex}
@@ -94,10 +112,10 @@ infrastructure.
 
 ### Semantic Ontologies
 
-Semantic ontologies are broadly defined as a formal way to codify the
+The goal of the semantic ontologies we propose is to codify formally the
 meaning of computational models.
 For our purposes, a semantic ontology consists of the objects and
-relations within the model, the meaning of those objects and relations, and
+relations within the domain of study, the meaning of those objects and relations, and
 the written forms that record them (syntax: a file, a model write-up, a
 specification).[^ha]
 Theory supplies part of the semantic ontology (a general-equilibrium
@@ -109,7 +127,9 @@ objects a given file or function call stands for, and ordinary solver code
 gives one executable realization, not a solver-independent statement of what
 the representation denotes.
 
-The importance of semantic ontologies is broadly recognized across research fields and in industry.
+The importance of semantic ontologies for interpreting and working with
+AI-generated code and output is now broadly recognized across research
+fields and in industry.
 Manufacturing's Process Specification Language ([Grüninger and Menzel 2003](#ref-gruninger2003); [Bock and Grüninger 2005](#ref-bock2005)), Modelica for physical systems ([Fritzson and Engelson 1998](#ref-fritzson1998); [Modelica Association 2023](#ref-modelica2023)), planning's PDDL2.1 ([Fox and Long 2003](#ref-fox2003)), and neuroscience's
 NeuroML ([Gleeson et al. 2010](#ref-gleeson2010)) each attach an explicit, solver-independent
 meaning to a model representation.
@@ -117,7 +137,7 @@ Industry has met the same need from the opposite direction, reconstructing
 never-written conceptual models of the business from its data and business
 processes ([AWS Database Blog 2026](#ref-aws2026)).
 Compared with all of these, economics is well placed: the relations among a
-model's objects are the theory itself, already stated precisely in the paper.
+domain of study's objects are the theory itself, which is well-defined in economics.
 What remains unstated is the map from the representations economists compute
 with (model files, toolkit calls, estimation specifications) to that
 theory, and the conditions under which the map holds.

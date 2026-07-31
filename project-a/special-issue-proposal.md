@@ -41,17 +41,14 @@ computed and which relations among them are enforced; these statements are calle
 *semantic ontologies*.
 Outside economics, the use of semantic ontologies has grown rapidly,
 because without them, AI outputs remain probabilistic, and prone to error and misunderstanding 
-(see [Semantic Ontologies](#semantic-ontologies) here[link to details]).
+([Grüninger and Menzel 2003](#ref-gruninger2003);
+[Modelica Association 2023](#ref-modelica2023);
+[Gleeson et al. 2010](#ref-gleeson2010);
+[AWS Database Blog 2026](#ref-aws2026); see
+[Semantic Ontologies](#semantic-ontologies) below).
 With semantic ontologies, translating models between toolkits, and even
 generating new modeling research, become operations a language model can
 carry out and be checked on cheaply, rather than manual recoding.
-
-```{raw:tex}
-\begin{displaybox}[breakable]{Proposed special issue}
-```
-
-::::{div}
-:class: displaybox displaybox-proposal
 
 We propose a special issue that constructs semantic ontologies for the
 domains of computational economics: domain-specific modeling languages (for
@@ -76,12 +73,6 @@ teams, will close the issue.
 The semantic ontologies we develop will be kept in an open-source GitHub
 repository, to which members of the community can contribute improvements
 and modifications.
-::::
-
-```{raw:tex}
-\end{displaybox}
-```
-
 <!-- needs to be something here about challenges for economics, i.e. application diversity. -->
 <!--
 The format is familiar at the journal, whose scope includes computational

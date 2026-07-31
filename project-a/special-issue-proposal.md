@@ -46,9 +46,6 @@ As a result, without a concrete statement of the model's meaning to check agains
 computational results are hard to cross-verify, and interoperability between
 implementations becomes difficult.
 
-So far, professional convention has helped trained modelers
-within a discipline to interpret, replicate, and build on one another's
-models.
 But convention breaks down once AI is used to write, modify, and
 translate modeling code.
 To interpret or verify AI output we need a statement, independent of the

@@ -41,16 +41,19 @@ underdetermine both what its code computes and what the computations mean.
 Only an informed reader can fill the gaps, one who knows the surrounding
 literature and has absorbed, through their professional networks, the conventions and
 traditions the paper leaves unstated.
-The same gaps confronts anyone who wants to interpretp the model's findings, or rebuilds or extends the model.
+The same gaps confront anyone who interprets the model's findings,
+rebuilds the model, or extends it.
 As a result, without a concrete statement of the model's meaning to check against,
 computational results are hard to cross-verify, and interoperability between
 implementations becomes difficult.
 
-But convention breaks down once AI is used to write, modify, and
+Relying on implicit professional convention is costly even among human
+modelers, and it fails completely when AI is used to write, modify, and
 translate modeling code.
-To interpret or verify AI output we need a statement, independent of the
-code, of which economic objects are computed and which relations among them
-are enforced; we call such statements *semantic ontologies*.
+An AI has no professional network: to interpret or verify its output we
+need a statement, independent of the code, of which economic objects are
+computed and which relations among them are enforced; we call such
+statements *semantic ontologies*.
 Outside economics, the use of semantic ontologies has grown rapidly,
 because without them AI use is prone to error and misunderstanding (see
 [Semantic Ontologies](#semantic-ontologies) below).

@@ -41,22 +41,22 @@ underdetermine both what its code computes and what the computations mean.
 Only an informed reader can fill the gaps, one who knows the surrounding
 literature and has absorbed, through their professional networks, the conventions and
 traditions the paper leaves unstated.
-The same gaps confront anyone who interprets the model's findings,
-rebuilds the model, or extends it.
+The same gaps confront anyone who attempts to interpret the model's findings,
+rebuild the model, or extend it.
 As a result, without a concrete statement of the model's meaning to check against,
 computational results are hard to cross-verify, and interoperability between
 implementations becomes difficult.
 
-Relying on implicit professional convention is costly even among human
-modelers, and it fails completely when AI is used to write, modify, and
+Relying on implicit professional convention alone is costly even amongst humans,
+but it fails completely when AI is used to write, modify, and
 translate modeling code.
-An AI has no professional network: to interpret or verify its output we
+For AI interpret or verify its output, we
 need a statement, independent of the code, of which economic objects are
-computed and which relations among them are enforced; we call such
-statements *semantic ontologies*.
+computed and which relations among them are enforced; these statements are called
+*semantic ontologies*.
 Outside economics, the use of semantic ontologies has grown rapidly,
-because without them AI use is prone to error and misunderstanding (see
-[Semantic Ontologies](#semantic-ontologies) below).
+because without them, AI outputs remain probabilistic, and prone to error and misunderstanding 
+(see [Semantic Ontologies](#semantic-ontologies) here[link to details]).
 With semantic ontologies, translating models between toolkits, and even
 generating new modeling research, become operations a language model can
 carry out and be checked on cheaply, rather than manual recoding.
@@ -219,7 +219,8 @@ method, a model class, or a combination of these.[^cg]
 ```
 
 <!--
-AAS to AAS: I am not sure about the third sentence above, for review.
+AAS to AAS: I am not sure about the model-class emphasis sentence (now in
+the domain-of-study footnote), for review.
 -->
 
 **Research themes.**

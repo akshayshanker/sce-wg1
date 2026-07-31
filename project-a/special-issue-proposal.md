@@ -95,39 +95,6 @@ another, the semantic ontologies that make this possible are research
 infrastructure.
 -->
 
-### Semantic Ontologies
-
-The goal of the semantic ontologies we propose is to codify formally the
-meaning of computational models.
-For our purposes, a semantic ontology consists of the objects and
-relations within the domain of study, the meaning of those objects and relations, and
-the written forms that record them (syntax: a file, a model write-up, a
-specification).[^ha]
-Theory supplies part of the semantic ontology (a general-equilibrium
-model's objects are precisely defined), but the semantic ontology must
-collect these definitions, map them concretely to computational and written
-counterparts, and state the assumptions under which the mapping holds.
-Without a written semantic ontology, nothing says which of the theory's
-objects a given file or function call stands for, and ordinary solver code
-gives one executable realization, not a solver-independent statement of what
-the representation denotes.
-
-The importance of semantic ontologies for interpreting and working with
-AI-generated code and output is now broadly recognized across research
-fields and in industry.
-Manufacturing's Process Specification Language ([Grüninger and Menzel 2003](#ref-gruninger2003); [Bock and Grüninger 2005](#ref-bock2005)), Modelica for physical systems ([Fritzson and Engelson 1998](#ref-fritzson1998); [Modelica Association 2023](#ref-modelica2023)), planning's PDDL2.1 ([Fox and Long 2003](#ref-fox2003)), and neuroscience's
-NeuroML ([Gleeson et al. 2010](#ref-gleeson2010)) each attach an explicit, solver-independent
-meaning to a model representation.
-Industry has met the same need from the opposite direction, reconstructing
-never-written conceptual models of the business from its data and business
-processes ([AWS Database Blog 2026](#ref-aws2026)).
-Compared with all of these, economics is well placed: the relations among a
-domain of study's objects are the theory itself, which is well-defined in economics.
-What remains unstated is the map from the representations economists compute
-with (model files, toolkit calls, estimation specifications) to that
-theory, and the conditions under which the map holds.
-Stating these maps, domain by domain, is the work this issue proposes.
-
 ### Organization
 
 Papers pass an internal review within the working group [process TBC] and then
@@ -193,6 +160,40 @@ and a menu of common policy rules while each model keeps its own equations; it
 standardizes comparison, not meaning.
 
 ## Guidelines for Papers
+
+### Semantic Ontologies
+
+The goal of the semantic ontologies we propose is to codify formally the
+meaning of computational models.
+For our purposes, a semantic ontology consists of the objects and
+relations within the domain of study, the meaning of those objects and relations, and
+the written forms that record them (syntax: a file, a model write-up, a
+specification).[^ha]
+Theory supplies part of the semantic ontology (a general-equilibrium
+model's objects are precisely defined), but the semantic ontology must
+collect these definitions, map them concretely to computational and written
+counterparts, and state the assumptions under which the mapping holds.
+Without a written semantic ontology, nothing says which of the theory's
+objects a given file or function call stands for, and ordinary solver code
+gives one executable realization, not a solver-independent statement of what
+the representation denotes.
+
+The importance of semantic ontologies for interpreting and working with
+AI-generated code and output is now broadly recognized across research
+fields and in industry.
+Manufacturing's Process Specification Language ([Grüninger and Menzel 2003](#ref-gruninger2003); [Bock and Grüninger 2005](#ref-bock2005)), Modelica for physical systems ([Fritzson and Engelson 1998](#ref-fritzson1998); [Modelica Association 2023](#ref-modelica2023)), planning's PDDL2.1 ([Fox and Long 2003](#ref-fox2003)), and neuroscience's
+NeuroML ([Gleeson et al. 2010](#ref-gleeson2010)) each attach an explicit, solver-independent
+meaning to a model representation.
+Industry has met the same need from the opposite direction, reconstructing
+never-written conceptual models of the business from its data and business
+processes ([AWS Database Blog 2026](#ref-aws2026)).
+Compared with all of these, economics is well placed: the relations among a
+domain of study's objects are the theory itself, which is well-defined in economics.
+What remains unstated is the map from the representations economists compute
+with (model files, toolkit calls, estimation specifications) to that
+theory, and the conditions under which the map holds.
+Stating these maps, domain by domain, is the work this issue proposes.
+
 
 ### Research Domains and Themes
 

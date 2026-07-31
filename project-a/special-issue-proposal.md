@@ -39,7 +39,7 @@ code.
 The paper says "we solve the following model", but its equations
 underdetermine both what its code computes and what the computations mean.
 Only an informed reader can fill the gaps, one who knows the surrounding
-literature and has absorbed, by working inside it, the conventions and
+literature and has absorbed, through their professional networks, the conventions and
 traditions the paper leaves unstated.
 The same gaps confronts anyone who wants to interpretp the model's findings, or rebuilds or extends the model.
 As a result, without a concrete statement of the model's meaning to check against,

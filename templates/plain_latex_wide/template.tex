@@ -8,7 +8,7 @@
 \usepackage{newtxmath}
 \usepackage{microtype}
 \usepackage{titling}
-\setlength{\droptitle}{-4.5em}
+\setlength{\droptitle}{-5.5em}
 \usepackage{setspace}
 \setstretch{1.03}
 \usepackage[defaultlines=3,all]{nowidow}
@@ -17,6 +17,10 @@
 \usepackage{titlesec}
 \titleformat*{\section}{\large\bfseries}
 \titleformat*{\subsection}{\normalsize\bfseries}
+\titleformat*{\subsubsection}{\normalsize\bfseries}
+\titlespacing*{\section}{0pt}{1.6em}{0.7em}
+\titlespacing*{\subsection}{0pt}{1.2em}{0.5em}
+\titlespacing*{\subsubsection}{0pt}{1.0em}{0.4em}
 \usepackage[most]{tcolorbox}
 \usepackage{enumitem}
 \setlist{noitemsep}
@@ -28,7 +32,7 @@
   colframe=black!70,
   boxrule=0.4pt,
   arc=1pt,
-  left=9pt, right=9pt, top=7pt, bottom=7pt,
+  left=9pt, right=9pt, top=5pt, bottom=5pt,
   title=\textsc{#2},
   fonttitle=\normalsize,
   coltitle=black,
@@ -38,7 +42,7 @@
   before upper={\setlength{\parindent}{0pt}\emergencystretch=1.2em
     \setlist[enumerate,1]{leftmargin=1.7em,labelsep=0.5em,itemsep=0.5em,topsep=0.15em,parsep=0pt}
     \setlist[itemize,1]{leftmargin=1.3em,labelsep=0.5em,itemsep=0.5em,topsep=0.15em,parsep=0pt}},
-  before skip=1.4em, after skip=1.4em
+  before skip=1.1em, after skip=1.1em
 }
 \bibliographystyle{abbrvnat}
 
